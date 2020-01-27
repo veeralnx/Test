@@ -1,13 +1,17 @@
+#!/usr/bin/env groovy
+
 // Obtaining an Docker server instance defined in Jenkins:
 
-pipline	(
+pipeline (
 	agent {
-		Docker ('ubuntu:latest')
-	steps (
-		step {
-			echo "Hello world"
+		docker { image 'ubuntu:latest' }
 	}
-	
+	stages (
+		stage (Test){
+			steps {
+				echo "Hello world"
+			}
 		}
+	
 	)
 )
