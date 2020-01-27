@@ -1,5 +1,3 @@
-#!/usr/bin/env groovy
-
 // Obtaining an Docker server instance defined in Jenkins:
 
 pipeline (
@@ -7,7 +5,7 @@ pipeline (
 		docker { image 'ubuntu:latest' }
 	}
 	stages (
-		stage (Test){
+		stage('Test'){
 			steps {
 				echo "Hello world"
 			}
